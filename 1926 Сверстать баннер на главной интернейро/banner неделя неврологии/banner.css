@@ -1,0 +1,115 @@
+.mnw-wrapper{
+    position: relative;
+    height: 363px;
+    margin: auto;
+    border-radius: 8px;
+}
+.mnw-wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: -1;   
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    border-radius: 8px;
+
+/* поправить ссылку на картинку вейна в зависимости от положения её в структуре битрикса! */
+    background-image: url(vein.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-color: #168AFF;
+  }
+.mnw-container{
+    max-width: 576px;
+    margin: auto;
+    padding: 2px 15px 23px;
+}
+.mnw__content{
+    padding-top: 10px;
+    font-family: Myriad Pro;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+.mnw__content span{
+    margin-right: 10px;
+}
+.mnw__ul{
+    margin-left: 17px;
+    list-style-type: disc;
+}
+.mnw__img{
+    width: 100%;
+}
+.mnw__hr{
+    width: 76%;
+    margin-top: 16px;
+    margin-bottom: 11px;
+    margin-left: 0;
+    color: #fff;
+    border: none;
+    border-top: 2px #fff solid;
+}
+.mnw__title{
+    padding-bottom: 4px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;  
+    text-transform: uppercase; 
+}
+.mnw__button{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-family: Myriad Pro;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    background-color: #fff;
+    color: #168AFF ;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+}
+.mnw__button:hover{
+   background-color: #D5EAFF;
+}
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .mnw-wrapper{
+        background-color: #168aff71;
+      }
+}
+@media (min-width: 566px) and (max-width: 767px){
+    .mnw-wrapper{
+        background-color: #168aff71;
+      }
+}
+@media (max-width: 565px){
+    .mnw-wrapper{
+        height: auto;
+    }
+    .mnw-wrapper::before{
+        background-image: none;
+    }
+    .mnw__content{
+        padding-top: 22px;
+    }
+    .mnw__hr{
+        width: 100%;
+        margin: 19px 0 20px;
+    }
+    .mnw__button{
+        width: 100%;
+        margin-top: 25px;
+        padding: 13px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+    }
+}
