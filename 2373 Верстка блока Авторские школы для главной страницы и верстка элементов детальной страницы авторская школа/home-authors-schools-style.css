@@ -43,19 +43,19 @@
 }
 .h-a-sch__img-wrapper::after{
     position: absolute;
-    display: flex;
-    content: "i";
+    content: "";
     font-weight: 500;
     bottom: 0;
     right: -16px;
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
     font-size: 24px;
     color: #fff;
     background-color: #9782EB;
+    background-image: url(Union2.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .h-a-sch__img{
     width: 176px;
@@ -109,6 +109,9 @@
         width: 24px;
         height: 24px;
         font-size: 18px;
+        background-image: url(Union.png);
+        bottom: 4px;
+        right: 2px;
     }
     .h-a-sch__img{
         width: 96px;
