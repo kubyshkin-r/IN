@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body{
+            background-color: #E5E5E5;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="form-container">
+        <div class="authorization__description">
+            <h2 class="authorization__h2">Вход</h2>
+            <p class="authorization__text">У вас нет логина и пароля?</p> 
+            <a href="" class="authorization__registration">Зарегистрироваться</a>
+        </div>
+        <form action="" class="authorization__form">
+            <div>
+                <label for="name">E-mail (Логин)*</label>
+                <input type="text" id="name" name="user_name" placeholder="example@mail.ru" />
+            </div>
+            <div class="authorization__login-pass">
+                <label for="password">Пароль*</label>
+                <div class="authorization__password">
+                    <input type="password" id="password-input" name="user_password" />
+                    <a href="#" class="authorization__password-control" onclick="return show_hide_password(this);"></a>
+                </div>
+                <a href="#" class="authorization__forget">Забыли пароль?</a>
+            </div>
+            <input type="submit" value="Войти на сайт"  name="button" class="authorization__enter"/>
+        </form>
+    </div>
+
+
+
+<!-- скрипты -->
+    <script>
+        function show_hide_password(target){
+        var input = document.getElementById('password-input');
+        if (input.getAttribute('type') == 'password') {
+            target.classList.add('view');
+            input.setAttribute('type', 'text');
+        } else {
+            target.classList.remove('view');
+            input.setAttribute('type', 'password');
+        }
+        return false;
+        }
+
+
+        var pass = document.querySelector('input[type=text]');
+        var login = document.querySelector('input[type=password]');
+
+
+        pass.addEventListener('input', changeBackground);
+        login.addEventListener('input', changeBackground);
+
+        function changeBackground() {
+        if (pass.value !== '' && login.value !== '') {
+            document.querySelector('.authorization__enter').style.opacity = '1';
+        } else {
+            document.querySelector('.authorization__enter').style.opacity = '0.5';
+        }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+.authorization__description{
+    width: 50%;
+}
+.authorization__form{
+    width: 50%;
+    padding: 24px 0 0 16px;
+}
+.authorization__h2{
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 104%;
+}
+.authorization__text{
+    max-width: 304px;
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.authorization__registration{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 124%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    text-decoration: underline;
+    color: #30CFBA;
+}
+.authorization__login-pass{
+    margin-top: 24px;
+}
+.authorization__password{
+    position: relative;
+    width: 416px;
+}
+.authorization__password-control{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 11px;
+	right: 23px;
+    background: url(/eye.svg) 0 3px no-repeat;
+}
+.authorization__password-control.view {
+	background: url(/no-eye.svg) 0 0 no-repeat;
+}
+.authorization__forget{
+    display: block;
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 124%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    text-decoration: underline;
+    color: #485251;
+}
+.authorization__enter{
+    margin-top: 32px;
+    /* transition: 0.5s ease all; */
+}
+.authorization__enter:hover{
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #30CFBA; */
+}
+
+
+@media (max-width: 991px){
+    .authorization__password{
+        width: auto;
+    }
+}
+@media (max-width: 565px){
+    .authorization__description{
+        width: 100%;
+    }
+    .authorization__form{
+        width: 100%;
+        padding: 32px 0 0;
+    }
+    .authorization__h2{
+        margin-bottom: 5px;
+        font-size: 26px;
+        line-height: 104%;
+        line-height: 31px;
+    }
+    .authorization__text{
+        max-width: 100%;
+        margin-top: 5px;
+        margin-bottom: -4px;
+        font-size: 14px;    
+    }
+    .authorization__registration{
+        font-size: 14px;
+    }
+    .authorization__login-pass{
+        margin-top: 16px;
+    }
+    .authorization__password-control{
+        top: 11px;
+        right: 16px;
+        background-size: 24px 24px;
+    }
+    .authorization__password-control.view {
+        top: 12px;
+        right: 16px;
+        background-size: 24px 24px;
+    }
+    .authorization__forget{
+        font-size: 14px;
+    }
+    .authorization__enter{
+        margin-top: 32px;
+    }
+}
