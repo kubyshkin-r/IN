@@ -1,0 +1,203 @@
+
+<style>
+    *{ 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root{
+        --gyn-base_color: #9782EB;
+    }
+    .event__h2-title a{
+        display: inline-block;
+        margin: 124px 0 24px;
+        text-decoration: none;
+        color: #485251;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 70px;
+        font-feature-settings: 'pnum' on, 'lnum' on; /*должен быть прописан в основных стилх */
+    }
+    .event__h2-title-arrow{
+        width: 56px;
+        height: 56px;
+        margin-left: 16px;
+        margin-bottom: -10px;
+        transition: all 0.2s; 
+    }
+    .event__h2-title a:hover .event__h2-title-arrow{
+        margin-left: 35px;
+    }
+    .index-events-container3{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .index-event-wrapper-news{
+        display: block;
+        position: relative;
+        width: 32%;
+        margin-right: 2%;
+        border-radius: 60px 60px 0 0;
+        border: #A2ABAA solid 2px;
+        background-color: transparent;
+        text-decoration: none;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        transition: all 0.3s;
+    }
+    .index-event-wrapper-news:hover{
+        background-color: #fff;
+    }
+    .index-event-wrapper-news:nth-child(3){
+        margin-right: 0;
+    }
+    .index-event-wrapper-news:nth-child(n+4){
+        display: none;
+    }
+    .index-event-news{
+        position: relative;
+        height: 250px;
+        border-bottom: #A2ABAA solid 2px;
+    }
+    .index-event-news-previev{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 58px 58px 0 0;
+    }
+    .index-event__data-news{
+        margin: 24px 22px 8px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 124%;
+        color: #485251;
+    }
+    .index-event__title-news{
+        height: 74px;
+        margin: 8px 22px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 124%;/* or 22px */
+        color: #485251;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .index-event__progect{
+        position: relative;
+        margin: 10px 0 30px 22px;
+        padding-left: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 124%;/* or 17px */
+        color: #A2ABAA;
+    }
+    .index-event__progect::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: 4px;
+        left: 0;
+        border-radius: 50%;
+        background-color: var(--gyn-base_color);
+    }
+
+
+    @media(max-width: 1100px){
+        .index-event-wrapper-news{
+            width: 49%;
+        }
+        .index-event-wrapper-news:nth-child(n+3){
+            display: none;
+        }
+        .index-event-wrapper-news:nth-child(2){
+            margin-right: 0;
+        }
+    }
+    @media(max-width: 800px){
+        .event__h2-title a{
+            margin: 56px 0 16px;
+            font-size: 25px;
+            line-height: 31px;
+        }
+        .event__h2-title-arrow{
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+            margin-bottom: -9px;  
+        }
+        .event__h2-title a:hover .event__h2-title-arrow{
+            margin-left: 8px;
+        }
+        .index-event-wrapper-news{
+            width: 100%;
+            margin-right: 0;
+        }
+        .index-event-wrapper-news:nth-child(n+2){
+            display: none;
+        }
+    }
+    @media(max-width: 550px){
+        .index-event-wrapper-news{
+            border-radius: 30px 30px 0 0;
+        }
+        .index-event-wrapper-news:nth-child(n+2){
+            display: none;
+        }
+        .index-event-news{
+            height: 160px;
+        }
+        .index-event-wrapper-news:hover{
+            background-color: transparent;
+        } 
+        .index-event-news-previev{
+            border-radius: 28px 28px 0 0;
+        }
+        .index-event__data-news{
+            margin: 15px 14px 8px;
+            font-size: 12px;
+        }
+        .index-event__title-news{
+            height: 53px;
+            font-size: 14px;
+            margin: 8px 14px 8px;
+        }
+        .index-event__progect{
+            margin-bottom: 22px;
+            margin-left: 14px;
+            padding-left: 12px;
+            font-size: 12px;
+        }
+        .index-event__progect::before{
+            top: 2px;
+        }
+    }
+</style>
+
+<h2 class="event__h2-title">
+    <a href="#">Новости<svg class="event__h2-title-arrow" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle r="26" transform="matrix(-1 0 0 1 28 28)" stroke="#485251" stroke-width="4" stroke-linecap="square"/>
+            <path d="M36 28L37.317 26.4948L39.0372 28L37.317 29.5052L36 28ZM26.683 22.5052L25.1778 21.1881L27.8119 18.1778L29.317 19.4948L26.683 22.5052ZM29.317 36.5052L27.8119 37.8222L25.1778 34.8119L26.683 33.4948L29.317 36.5052ZM20 30L18 30L18 26L20 26L20 30ZM34.683 29.5052L26.683 22.5052L29.317 19.4948L37.317 26.4948L34.683 29.5052ZM26.683 33.4948L34.683 26.4948L37.317 29.5052L29.317 36.5052L26.683 33.4948ZM36 30L20 30L20 26L36 26L36 30Z" fill="#485251"/>
+        </svg>
+    </a>
+</h2> 
+
+<div class="index-events-container3">
+    <a href="#" class="index-event-wrapper-news">
+        <div class="index-event-news">
+            <!-- если у новости нет изображения, то ставим базовое -->
+            <img class="index-event-news-previev" src="https://www.managepain.ru/upload/resize_cache/iblock/2bc/ohzpxaflj121vtmpecymytnkjhm0kuhr/1200_600_2/vinsent_van_gog_zvezdnaya_noch_maslo_kholst_117815_1920x1080.jpg" alt="">
+        </div>
+        <p class="index-event__data-news">17 января 2022</p>
+        <h3 class="index-event__title-news">
+            Бесплодие: от амбулаторной практики до вспомогательных репродуктивных Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quas molestiae aperiam maxime blanditiis ratione adipisci, fugiat libero eveniet?
+        </h3>
+        <div class="index-event__progect">Гинекология</div>
+    </a> 
+</div>

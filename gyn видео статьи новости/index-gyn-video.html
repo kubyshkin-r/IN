@@ -1,0 +1,227 @@
+<style>
+    *{ 
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root{
+        --gyn-base_color: #9782EB;
+    }
+    .event__h2-title a{
+        display: inline-block;
+        margin: 124px 0 24px;
+        text-decoration: none;
+        color: #485251;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 70px;
+        font-feature-settings: 'pnum' on, 'lnum' on; /*должен быть прописан в основных стилх */
+    }
+    .event__h2-title-arrow{
+        width: 56px;
+        height: 56px;
+        margin-left: 16px;
+        margin-bottom: -10px;
+        transition: all 0.2s; 
+    }
+    .event__h2-title a:hover .event__h2-title-arrow{
+        margin-left: 35px;
+    }
+    .index-events-container3{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .index-event-wrapper-video{
+        display: block;
+        position: relative;
+        width: 32%;
+        margin-right: 2%;
+        border-radius: 0 0 60px 0;
+        border: #A2ABAA solid 2px;
+        background-color: transparent;
+        text-decoration: none;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        transition: all 0.3s;
+    }
+    .index-event-wrapper-video:hover{
+        background-color: #fff;
+    }
+    .index-event-wrapper-video:nth-child(3){
+        margin-right: 0;
+    }
+    .index-event-wrapper-video:nth-child(n+4){
+        display: none;
+    }
+    .index-event-video{
+        position: relative;
+        height: 281px;
+        border-bottom: #A2ABAA solid 2px;
+    }
+    .index-event-video::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.562);
+    }
+    .index-event-video::before{
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        width: 72px;
+        height: 72px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: var(--gyn-base_color);
+        transition: all 0.1s;
+        
+        /* меняем адрес url в соответствии с расположением картинки */
+        background-image: url(https://interneuro.ru/upload/images/play_video.svg);
+        background-position: 55.5% center; 
+        background-repeat: no-repeat;
+        background-size: 25%;
+        z-index: 1;
+    }
+    .index-event-video-previev{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .index-event-wrapper-video:hover .index-event-video::before{
+        width: 74px;
+        height: 74px;
+        background-size: 26%;
+    }
+    .index-event__title-video{
+        height: 74px;
+        margin: 24px 22px 8px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 124%;/* or 22px */
+        color: #485251;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .index-event__progect{
+        position: relative;
+        margin: 10px 0 30px 22px;
+        padding-left: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 124%;/* or 17px */
+        color: #A2ABAA;
+    }
+    .index-event__progect::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: 4px;
+        left: 0;
+        border-radius: 50%;
+        background-color: var(--gyn-base_color);
+    }
+
+
+    @media(max-width: 1100px){
+        .index-event-wrapper-video{
+            width: 49%;
+        }
+        .index-event-wrapper-video:nth-child(n+3){
+            display: none;
+        }
+        .index-event-wrapper-video:nth-child(2){
+            margin-right: 0;
+        }
+    }
+    @media(max-width: 800px){
+        .event__h2-title a{
+            margin: 56px 0 16px;
+            font-size: 25px;
+            line-height: 31px;
+        }
+        .event__h2-title-arrow{
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+            margin-bottom: -9px;  
+        }
+        .event__h2-title a:hover .event__h2-title-arrow{
+            margin-left: 8px;
+        }
+        .index-event-wrapper-video{
+            width: 100%;
+            margin-right: 0;
+        }
+        .index-event-wrapper-video:nth-child(n+2){
+            display: none;
+        }
+    }
+    @media(max-width: 550px){
+        .index-event-wrapper-video{
+            border-radius: 0 0 30px 0;
+        }
+        .index-event-wrapper-video:hover{
+        background-color: transparent;
+    }
+        .index-event-wrapper-video:nth-child(n+2){
+            display: none;
+        }
+        .index-event-video{
+            height: 192px;
+        }
+        .index-event-video::before{
+            width: 56px;
+            height: 56px;
+            background-size: 22%;
+        }
+        .index-event-wrapper-video:hover .index-event-video::before{
+            width: 56px;
+            height: 56px;
+            background-size: 22%;
+        }
+        .index-event__title-video{
+            height: 53px;
+            font-size: 14px;
+            margin: 15px 14px 8px;
+        }
+        .index-event__progect{
+            margin-bottom: 22px;
+            margin-left: 14px;
+            padding-left: 12px;
+            font-size: 12px;
+        }
+        .index-event__progect::before{
+            top: 2px;
+        }
+    }
+</style>
+
+<h2 class="event__h2-title">
+    <a href="#">Видео<svg class="event__h2-title-arrow" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle r="26" transform="matrix(-1 0 0 1 28 28)" stroke="#485251" stroke-width="4" stroke-linecap="square"/>
+            <path d="M36 28L37.317 26.4948L39.0372 28L37.317 29.5052L36 28ZM26.683 22.5052L25.1778 21.1881L27.8119 18.1778L29.317 19.4948L26.683 22.5052ZM29.317 36.5052L27.8119 37.8222L25.1778 34.8119L26.683 33.4948L29.317 36.5052ZM20 30L18 30L18 26L20 26L20 30ZM34.683 29.5052L26.683 22.5052L29.317 19.4948L37.317 26.4948L34.683 29.5052ZM26.683 33.4948L34.683 26.4948L37.317 29.5052L29.317 36.5052L26.683 33.4948ZM36 30L20 30L20 26L36 26L36 30Z" fill="#485251"/>
+        </svg>
+    </a>
+</h2> 
+
+<div class="index-events-container3">
+    <a href="#" class="index-event-wrapper-video">
+        <div class="index-event-video">
+            <img class="index-event-video-previev" src="https://interneuro.ru/upload/images/2021-11-30.jpg" alt="">
+        </div>
+        <h3 class="index-event__title-video"><!-- этот блок должен присутствовать даже если он пустой -->
+            Бесплодие: от амбулаторной практики до вспомогательных репродуктивных Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quas molestiae aperiam maxime blanditiis ratione adipisci, fugiat libero eveniet?
+        </h3>
+        <div class="index-event__progect">Гинекология</div>
+    </a> 
+</div>

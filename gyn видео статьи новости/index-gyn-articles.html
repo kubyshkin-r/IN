@@ -1,0 +1,247 @@
+<style>
+    :root{
+        --gyn-base_color: #9782EB;
+    }
+    .index-articles-wrapper{
+        background-color: #fff;
+        border-radius: 100px;
+        padding-bottom: 100px;
+    }
+    .event__h2-title2 a{
+        display: inline-block;
+        margin: 76px 0 24px;
+        text-decoration: none;
+        color: #485251;
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 70px;
+        font-feature-settings: 'pnum' on, 'lnum' on; /*должен быть прописан в основных стилх */
+    }
+    .event__h2-title-arrow{
+        width: 56px;
+        height: 56px;
+        margin-left: 16px;
+        margin-bottom: -10px;
+        transition: all 0.2s; 
+    }
+    .event__h2-title2 a:hover .event__h2-title-arrow{
+        margin-left: 35px;
+    }
+    .index-events-container3{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .index-event-wrapper-articles2{
+        display: block;
+        position: relative;
+        width: 32%;
+        margin-right: 2%;
+        border-radius: 60px 60px 0 0;
+        background-color: transparent;
+        text-decoration: none;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+    .index-event-wrapper-articles2:hover{
+        text-decoration: underline;
+        color: #A2ABAA;
+    }
+    .index-event-wrapper-articles2:nth-child(3){
+        margin-right: 0;
+    }
+    .index-event-wrapper-articles2:nth-child(n+4){
+        display: none;
+    }
+    .index-event-articles{
+        position: relative;
+        height: 240px;
+    }
+    .index-event-articles-previev{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 60px 60px 60px 0;
+    }
+    .index-event__title-articles{
+        max-height: 74px;
+        margin: 10px 0;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 124%;/* or 22px */
+        color: #485251;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .index-event__progect{
+        position: relative;
+        margin: 10px 0;
+        padding-left: 12px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 124%;/* or 17px */
+        color: #A2ABAA;
+    }
+    .index-event__progect::before{
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        top: 4px;
+        left: 0;
+        border-radius: 50%;
+        background-color: var(--gyn-base_color);
+    }
+    .index-event-autors-contact{
+        max-height: 45px;
+        margin-top: 10px;
+        overflow: hidden;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 124%;
+        color: #A2ABAA;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    @media(max-width: 1100px){
+        .index-event-wrapper-articles2{
+            width: 49%;
+        }
+        .index-event-wrapper-articles2:nth-child(n+3){
+            display: none;
+        }
+        .index-event-wrapper-articles2:nth-child(2){
+            margin-right: 0;
+        }
+    }
+    @media(max-width: 800px){
+        .index-articles-wrapper{
+            border-radius: 0;
+        }
+        .event__h2-title2 a{
+            margin: 17px 0 16px;
+            font-size: 25px;
+            line-height: 31px;
+        }
+        .event__h2-title-arrow{
+            width: 32px;
+            height: 32px;
+            margin-left: 8px;
+            margin-bottom: -9px;  
+        }
+        .event__h2-title2 a:hover .event__h2-title-arrow{
+            margin-left: 8px;
+        }
+        .index-event-wrapper-articles2{
+            width: 100%;
+            margin-right: 0;
+        }
+        .index-event-wrapper-articles2:nth-child(n+2){
+            display: none;
+        }
+    }
+    @media(max-width: 550px){
+        .index-articles-wrapper{
+            padding-bottom: 50px;
+        }
+        .index-event-wrapper-articles2{
+            border-radius: 30px 30px 0 0;
+        }
+        .index-event-wrapper-articles2:nth-child(n+2){
+            display: none;
+        }
+        .index-event-articles{
+            height: 160px;
+        }
+        .index-event-articles-previev{
+            border-radius: 30px 30px 30px 0;
+        }
+        .index-event__title-articles{
+            height: 53px;
+            font-size: 14px;
+        }
+        .index-event__progect{
+            padding-left: 12px;
+            font-size: 12px;
+        }
+        .index-event__progect::before{
+            top: 2px;
+        }
+        .index-event-autors-contact{
+            font-size: 12px;
+        }
+    }
+</style>
+</section>
+<div class="index-articles-wrapper">
+<section class="main">
+<!-- блок с заголовком взять актуальный из кода, тк Андрей его переписывал-->
+
+
+    <!-- <h2 class="event__h2-title2">
+        <a href="#">Cтатьи<svg class="event__h2-title-arrow" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle r="26" transform="matrix(-1 0 0 1 28 28)" stroke="#485251" stroke-width="4" stroke-linecap="square"/>
+                <path d="M36 28L37.317 26.4948L39.0372 28L37.317 29.5052L36 28ZM26.683 22.5052L25.1778 21.1881L27.8119 18.1778L29.317 19.4948L26.683 22.5052ZM29.317 36.5052L27.8119 37.8222L25.1778 34.8119L26.683 33.4948L29.317 36.5052ZM20 30L18 30L18 26L20 26L20 30ZM34.683 29.5052L26.683 22.5052L29.317 19.4948L37.317 26.4948L34.683 29.5052ZM26.683 33.4948L34.683 26.4948L37.317 29.5052L29.317 36.5052L26.683 33.4948ZM36 30L20 30L20 26L36 26L36 30Z" fill="#485251"/>
+            </svg>
+        </a>
+    </h2>  -->
+
+    <div class="index-events-container3">
+
+        <a href="#" class="index-event-wrapper-articles2">
+            <div class="index-event-articles"> 
+                <!-- если картинки нет, то ставим картинку по умолчанию как в макете -->
+                <img class="index-event-articles-previev" src="https://interneuro.ru/upload/images/test_img.png" alt="">
+            </div>
+            <div class="index-event__progect">Гинекология</div>
+            <h3 class="index-event__title-articles">
+                Бесплодие: от амбулаторной практики до всп ом ог ательных репродуктивных Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quas molestiae aperiam maxime blanditiis ratione adipisci, fugiat libero eveniet?
+            </h3>
+            <p class="index-event-autors-contact">Зырянов С.К., Бутранова О.И., Пуцман Г.А. </p>
+        </a> 
+        <a href="#" class="index-event-wrapper-articles2">
+            <div class="index-event-articles"> 
+                <!-- если картинки нет, то ставим картинку по умолчанию как в макете -->
+                <img class="index-event-articles-previev" src="https://interneuro.ru/upload/images/test_img.png" alt="">
+            </div>
+            <div class="index-event__progect">Гинекология</div>
+            <h3 class="index-event__title-articles">
+                Бесплодие: от амбулаторной практики до всп ом ог ательных репродуктивных Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quas molestiae aperiam maxime blanditiis ratione adipisci, fugiat libero eveniet?
+            </h3>
+            <p class="index-event-autors-contact">Зырянов С.К., Бутранова О.И., Пуцман Г.А. </p>
+        </a> 
+        <a href="#" class="index-event-wrapper-articles2">
+            <div class="index-event-articles"> 
+                <!-- если картинки нет, то ставим картинку по умолчанию как в макете -->
+                <img class="index-event-articles-previev" src="https://interneuro.ru/upload/images/test_img.png" alt="">
+            </div>
+            <div class="index-event__progect">Гинекология</div>
+            <h3 class="index-event__title-articles">
+                Бесплодие: от амбулаторной практики до всп ом ог ательных репродуктивных Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quas molestiae aperiam maxime blanditiis ratione adipisci, fugiat libero eveniet?
+            </h3>
+            <p class="index-event-autors-contact">Зырянов С.К., Бутранова О.И., Пуцман Г.А. </p>
+        </a> 
+        <a href="#" class="index-event-wrapper-articles2">
+            <div class="index-event-articles"> 
+                <!-- если картинки нет, то ставим картинку по умолчанию как в макете -->
+                <img class="index-event-articles-previev" src="https://interneuro.ru/upload/images/test_img.png" alt="">
+            </div>
+            <div class="index-event__progect">Гинекология</div>
+            <h3 class="index-event__title-articles">
+                Бесплодие: от амбулаторной практики до всп ом ог ательных репродуктивных Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quas molestiae aperiam maxime blanditiis ratione adipisci, fugiat libero eveniet?
+            </h3>
+            <p class="index-event-autors-contact">Зырянов С.К., Бутранова О.И., Пуцман Г.А. </p>
+        </a> 
+
+    </div>
+</section>  
+</div>
+<section class="main">
