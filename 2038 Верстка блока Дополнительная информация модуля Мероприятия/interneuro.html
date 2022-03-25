@@ -1,0 +1,78 @@
+<content>
+    <div class="event_add_information__organizers">
+        <a href="/events/2021-12-20-disfagiya-u-patsienta-posle-onmk-osobennosti-nutri/organization/">
+            <div>Оргкомитет</div>
+            <div>
+                                </div>
+        </a>
+    </div>
+    <div class="event_add_information__sponsors-partners">
+        <a href="/events/2021-12-20-disfagiya-u-patsienta-posle-onmk-osobennosti-nutri/sponsors/">
+            <div>Спонсоры</div>
+            <div>
+                                </div>
+        </a>
+    </div>
+    <div class="event_add_information__organizers">
+        <a href="#">
+            <div>Помощь</div>
+            <div>
+                                </div>
+        </a>
+    </div>
+    <div class="event_add_information__sponsors-partners">
+        <a href="#">
+            <div>Партнеры</div>
+            <div>
+                                </div>
+        </a>
+    </div>
+
+</content>
+<style>
+section.event_add_information > content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.event_add_information > content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 42%;
+    border-top: 3px solid #29767e;
+    border-bottom: 3px solid #29767e;
+    padding: 25px 0px;
+}
+.event_add_information__organizers {
+    /* margin-right: 100px; */
+    margin-right: 0;
+}
+.event_add_information__sponsors-partners {
+    /* margin-left: 100px; */
+    margin-left: 0;
+}
+.event_add_information__organizers:nth-of-type(3), .event_add_information__sponsors-partners:nth-of-type(3), .event_add_information__sponsors-partners:nth-of-type(4){
+    margin-top: 30px;
+}
+
+
+@media (max-width: 768px){
+    .event_add_information__organizers:nth-of-type(3), .event_add_information__sponsors-partners:nth-of-type(3), .event_add_information__sponsors-partners:nth-of-type(4){
+        margin-top: 0;
+    }
+    section.event_add_information > content > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 100%;
+        border-top: none;
+        border-bottom: 1px solid #29767e;
+        padding: 25px 0px;
+    }
+}
+</style>
