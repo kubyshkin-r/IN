@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 700;
+    src: local("Gilroy-Bold"),
+    url("Gilroy-Bold.woff") format("woff");
+}
+.mnw-3-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: end;
+    height: 363px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #fafafa;
+    background-image: url(eliquis-background.jpg);
+    background-repeat: no-repeat;
+    background-position: -98px -36px;
+}
+.mnw-3-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 355px;
+    height: 355px;
+    background-image: url(eliquis-brain.png);
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+.mnw-3-container{
+    position: relative;
+    width: 240px;
+    margin: 79px 16px 0 0;
+    z-index: 4;
+}
+.mnw-3__title{
+    margin-bottom: 24px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 37px;
+    color: #3D1C2D;
+}
+.mnw-3__button{
+    position: relative;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 43px 14px;
+    border-radius: 100px;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    background-color: #D30072;
+    color: #fff ;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    transition: all 0.3s;
+    box-shadow: 14px 23px 52px -11px #8b004b;
+    z-index: 69;
+}
+.mnw-3__button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(38.06deg, #8B004B 19.8%, rgba(0, 0, 0, 0) 86.04%);
+    border-radius: 100px;
+    z-index: -1;
+}
+.mnw-3__button:hover{
+    background-color: #8B004B;
+}
+.mnw-3__button:active{
+    top: 1px;
+    left: 1px;
+    box-shadow: 13px 22px 51px -10px #8b004b;
+}
+
+@media (max-width: 767px), (min-width: 992px) and (max-width: 1199px){
+    .mnw-3-wrapper::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+@media (max-width: 380px){
+    .mnw-3-wrapper{
+        align-items: center;
+    }
+    .mnw-3-wrapper::after{
+        width: auto;
+        height: auto;
+        right: 0;
+        bottom: 0;
+        background-size: 100%;
+        border-radius: 8px;
+        opacity: 0.5;
+    }
+    .mnw-3-container{
+        margin: 0 16px 0;
+        width: auto;
+        text-align: center;
+    }
+    .mnw-3__title{
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .mnw-3__button{
+        width: 100%;
+        font-size: 15px;
+        line-height: 18px;;
+    }
+}
