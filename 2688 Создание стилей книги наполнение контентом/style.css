@@ -2,6 +2,8 @@
     --padding-l-r: 48px;
 }
 .left-page, .right-page{
+    display: flex;
+    flex-direction: column;
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
@@ -15,10 +17,10 @@
 header{
     display: flex;
     justify-content: space-between;
-    margin-top: 37px;
-    padding-bottom: 2px;
+    margin-top: 34px;
+    padding-bottom: 5px;
     width: calc(100% - 48px);
-    border-bottom: 2px solid #006cb7;
+    border-bottom: 1px solid #006cb7;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 11px;
     color: #006cb7;
@@ -30,38 +32,47 @@ header{
 .right-page header{
     margin-left: var(--padding-l-r);
 }
+.content{
+    margin: 10px var(--padding-l-r) 0;
+}
 
-
-.block{
+/* .block{
     background-color: aqua;
     width: 50px;
     height: 50px;
     transform: skew(-50deg);
-}
+} */
 footer{
-    position: absolute;
+    display: flex;
     bottom: 20px;
-    margin-top: 20px;
-    border-top: 2px solid #006cb7;
-    width: 100%;
+    border-top: 1px solid #006cb7;
+    margin: auto var(--padding-l-r) 33px;
+}
+.left-page footer{
+}
+.right-page footer{
+    justify-content: flex-end;
 }
 .page-number{
     position: relative;
-    margin: -9px 0 0 10px;
-    padding: 5px 0 0;
-    width: 22px;
+    margin: -7px 0 0 0px;
+    padding: 3px 0 2px;
+    width: 17px;
     background-color: #006cb7;
     color: #fff;
     text-align: center;
-    transform: skew(-5deg);
-
+    transform: skew(-7deg);
+    font-size: 0.7em;
+}
+.right-page .page-number{
+    margin-right: -5px;
 }
 .page-number::before{
     position: absolute;
     content: '';
     background-color: #7fb5da;
     bottom: 0;
-    left: -10px;
-    width: 10px;
-    height: 15px;
+    left: -5px;
+    width: 5px;
+    height: 12px;
 }
