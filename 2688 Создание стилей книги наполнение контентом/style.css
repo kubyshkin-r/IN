@@ -31,7 +31,7 @@ header{
     margin-top: 34px;
     padding-bottom: 4px;
     width: calc(100% - var(--padding-leftRight));
-    border-bottom: 1px solid #006cb7;
+    border-bottom: 1px solid var(--headerСolor);
     font-size: 11px;
     line-height: 1.2em;
 }
@@ -57,6 +57,7 @@ header{
 }
 .content p{
     text-indent: 1.5em;
+    text-align: justify;
 }
 span{
     font-weight: 600;
@@ -65,10 +66,16 @@ li{
     list-style-position: inside;
     text-indent: 1.5em;
 }
+.content img{
+    width: 100%;
+}
+.content figure{
+    text-align: center;
+}
 footer{
     display: flex;
     bottom: 20px;
-    border-top: 1px solid #006cb7;
+    border-top: 1px solid var(--headerСolor);
     margin: auto var(--padding-leftRight) 0;
     padding-bottom: 33px;
 }
@@ -80,7 +87,7 @@ footer{
     margin: -7px 0 0 0;
     padding: 3px 0 2px;
     width: 17px;
-    background-color: #006cb7;
+    background-color: var(--headerСolor);
     color: #fff;
     text-align: center;
     transform: skew(-7deg);
@@ -99,8 +106,32 @@ footer{
     width: 5px;
     height: 12px;
 }
-
-
+.content-img-p{
+    margin-bottom: 20px;
+    text-indent: 0;
+    text-align: center;
+}
+.content-p-ti{
+    text-indent: 0;
+}
+.content-table{
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.content-table caption{
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+.content-table th{
+    padding: 2px;
+    background-color: #7fb5da;
+}
+.content-table td{
+    padding: 4px;
+}
+.content-table td:nth-of-type(odd){
+    background-color: #c7e7f2;
+}
 /* конец общих стилей */
 .title-page{
     display: flex;
