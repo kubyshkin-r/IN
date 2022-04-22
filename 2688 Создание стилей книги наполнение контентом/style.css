@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root{
-    --padding-leftRight: 48px;
+    --padding-leftRight: 45px;
     --headerСolor: #006cb7;
 }
 .left-page, .right-page{
@@ -33,7 +33,7 @@ header{
     width: calc(100% - var(--padding-leftRight));
     border-bottom: 1px solid var(--headerСolor);
     font-size: 11px;
-    line-height: 1.2em;
+    line-height: 13px;
 }
 .left-page header{
     padding-left: var(--padding-leftRight);
@@ -43,34 +43,29 @@ header{
 }
 .content{
     margin: 10px var(--padding-leftRight) 14px;
-    font-size: 0.87rem;
 }
 .content h1{
     margin: 30px 0;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1em;
 }
 .content h2{
-    margin: 33px 0 17px;
+    margin: 28px 0 17px;
     text-indent: 1.5em;
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
 .content p{
     text-indent: 1.5em;
     text-align: justify;
+    font-size: 0.83em;
+    line-height: 1.2em;
 }
-span{
-    font-weight: 600;
-}
-li{
+.content li{
     list-style-position: inside;
     text-indent: 1.5em;
 }
 .content img{
     width: 100%;
-}
-.content figure{
-    text-align: center;
 }
 footer{
     display: flex;
@@ -92,7 +87,7 @@ footer{
     text-align: center;
     transform: skew(-7deg);
     font-size: 11px;
-    line-height: 1.2em;
+    line-height: 13px;
 }
 .right-page .page-number{
     margin-right: -5px;
@@ -106,17 +101,20 @@ footer{
     width: 5px;
     height: 12px;
 }
-.content-img-p{
+.content .content-img-p{
     margin-bottom: 20px;
     text-indent: 0;
     text-align: center;
+    font-weight: 700;
 }
-.content-p-ti{
+.content .content-p-ti{
     text-indent: 0;
 }
-.content-table{
+.content .content-table{
     border-collapse: collapse;
     margin-bottom: 10px;
+    font-size: 0.83em;
+    line-height: 1.2em;
 }
 .content-table caption{
     padding-bottom: 5px;
@@ -148,7 +146,7 @@ footer{
 }
 .title-page__content{
     border-left: 1px solid #000;
-    margin: -90px 50px 0 77px;
+    margin: -30px 50px 0 77px;
     padding-left: 25px;
 }
 .title-page__authors{
@@ -162,4 +160,33 @@ footer{
     font-size: 1.3em;
     font-weight: 600;
     line-height: 1.3em;
+}
+
+
+@media (min-width: 941px) and (max-width: 1200px){
+    :root{
+        --padding-leftRight: 35px;
+    }
+    header {
+        margin-top: 26px;
+        font-size: 9px;
+    }
+    .title-page, .left-page, .right-page{
+        min-height: 600px;
+    }
+    .content h1 {
+        margin: 22px 0;
+    }
+    .content h2 {
+        margin: 20px 0 15px;
+    }
+    .content p{
+        font-size: 0.9em;
+    }
+    footer{
+        padding-bottom: 15px;
+    }
+}
+@media (max-width: 700px){
+
 }
