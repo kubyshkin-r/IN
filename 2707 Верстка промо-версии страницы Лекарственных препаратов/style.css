@@ -1,15 +1,52 @@
-.pb__container{
+:root{
+    --text-color: #A7A7A7;
+}
+.expert-columns {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+}
+.column-basic{
+    width: 76%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 134%;
+    color: #2C2C2C;
+}
+.column-page-nav {
+    width: 24%;
+    background-color: #FAFAFA;
+    color: var(--text-color) ;
+    padding: 36px 26px;
+    border-radius: 8px;
+    max-height: 343px;
+}
+.column-page-nav {
+    margin-left: 24px;
+}
+
+/* мои */
+/* .pb__container{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.pb__banner{
-    width: 73%;
+*/
+.column-basic h2{
+    margin: 80px 0 16px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: #1D1D1D;
+}
+.pd__banner{
     height: 440px;
     border-radius: 8px;
 }
-.pb__banner img{
+.pd__banner img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -18,11 +55,11 @@
 .pd__menu{
     position: sticky;
     top: 0;
-    width: 25%;
+    min-height: 440px;
     padding: 32px 26px;
     border-radius: 8px;
     background-color: #fafafa;
-}   
+}
 .pd__menuLi{
     list-style-type: none;
 }
@@ -33,18 +70,97 @@
     display: block;
     color: #A7A7A7;
     text-decoration: none;
-    
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 124%;
 }
-
 .pd__menuLi_active a{
     font-weight: 600;
     color: #29767E;
 }
-.pd__block-wrapper{
+
+
+.pd__basic{
+    display: flex;
+    margin: 40px 0 80px;
+}
+.pd__basicImg{
+    width: 43%;
+    height: 440px;
+    margin-right: 23px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    display: flex;
+    padding: 55px;
+    justify-content: center;
+    overflow: hidden;
+}
+.pd__basicImg img{
+    object-fit: contain;
+    width: 100%;
+}
+.pd__title{
+    position: relative;
+}
+.pd__p1{
+    font-size: 16px;
+    line-height: 124%;
+    color: var(--text-color);
+    margin: 24px 0 8px;
+}
+.pd__p1:first-child{
+    margin-top: 0;
+}
+.pd__title a, .pd__about a{
+    font-size: 20px;
+    line-height: 124%;
+    text-decoration-line: underline;
+    color: #29767E;
+}
+.pd__manufacturer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.pd__manufacturer div{
+    width: 188px;
+    height: 116px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    display: flex;
+    padding: 21px;
+    justify-content: center;
+    overflow: hidden;
+}
+.pd__manufacturer img{
+    object-fit: contain;
+    width: 100%;
+}
+.pd__description p{
+    margin: 10px 0 10px;
+}
+.pd__about{
+    display: flex;
+}
+.pd__logo{
+    width: 294px;
+    height: 208px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    overflow: hidden;
+}
+.pd__logo img{
+    object-fit: contain;
+    width: 100%;
+}
+.pd__about>*+*{
+    margin-left: 24px;
+}
+/* .pd__block-wrapper{
     display: flex;
 }
 .pd__block-content{
@@ -52,28 +168,103 @@
 }
 .pb__description, drug-interaction, #drug-interaction, #video, #study-results{
     width: 73%;
-}
+} */
 
-
-@media (max-width: 690px){/*991 px по in*/
-    .pb__container{
-        display: block;
+@media (max-width: 1199px){
+    .pd__basicImg{
+        width: 60%;
+        padding: 27px;
     }
-    .pb__banner{
-        width: 100%;
+}
+@media (max-width: 991px){ /* 660 */
+    .container{
+        padding: 15px;
+    }
+    .pd__banner{
         height: 340px;
         margin-bottom: 16px;
     }
-    .pd__menu{
+    .expert-columns{
+        flex-direction: column;
+    }
+    .column-basic{
+        order: 2;
         width: 100%;
+    }
+    .pd__basic{
+        flex-direction: column;
+        margin: 24px 0 64px;
+    }
+    .pd__basicImg{
+        width: 100%;
+        height: 280px;
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    .pd__manufacturer{
+        position: static;
+        padding-top: 16px;
+    }
+    .pd__manufacturer div{
+        width: 100%;
+        height: 200px;
+        border: 1px solid #DDDDDD;
+        border-radius: 8px;
+        display: flex;
+        padding: 21px;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .pd__manufacturer img{
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .pd__about{
+        flex-direction: column;
+    }
+    .pd__logo{
+        width: 100%;
+        height: 200px;
+
+    }
+
+    .pd__about>*+*{
+        margin-left: 0;
+        margin-top: 24px;
+    }
+
+    .pd__menu{
+        order: 1;
+        width: 100vw;
+        min-height: auto;
+        margin-bottom: 16px;
+        margin-left: 0;
         padding: 0;
+        padding: 0 calc((100vw - 100%) / 2);
         overflow: hidden;
         border-radius: 0;
+        margin: 0 calc(((100vw - 100%) / 2) * -1) 16px;
     }
-    .pd__menu ul{
+    .pd__menu{
+        order: 1;
+        width: 100vw;
+        min-height: auto;
+        margin-bottom: 16px;
+        margin-left: 0;
+        padding: 0;
+        padding: 0 calc((100vw - 100%) / 2);
+        overflow: hidden;
+        border-radius: 0;
+        margin: 0 calc(((100vw - 100%) / 2) * -1) 16px;
+        box-shadow: 0px 0px 20px;
+    }
+
+    .pd__menuUl{
         display: flex;
         width: 100%;
         overflow: scroll;
+        white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 20px;
         margin-bottom: -20px;
@@ -83,5 +274,48 @@
         white-space: nowrap;
         margin-top: 0;
         padding: 20px 8px;
+    } */
+}
+
+@media (max-width: 575px){
+    .column-basic{
+        font-size: 15px;
+        line-height: 120%;
     }
+    .pd__description h2{
+        margin: 48px 0 8px;
+        font-size: 24px;
+        line-height: 26px;
+    }
+    .pd__description p{
+        font-size: 15px;
+        line-height: 120%;
+    }
+    .pd__basicImg{
+
+        height: 214px;
+    }
+    .pd__p1{
+        font-size: 12px;
+        line-height: 14px;
+        margin: 16px 0 4px;
+    }
+    
+    .pd__title a, .pd__p1 a{
+        font-size: 15px;
+        line-height: 120%;
+    }
+    .pd__menu{
+        width: calc(100% + 30px) ;
+        margin-left: -15px;
+        margin-right: -15px;
+
+    }
+    .pd__manufacturer div, .pd__logo{
+        height: 120px;
+
+        padding: 30px;
+
+    }
+  
 }
