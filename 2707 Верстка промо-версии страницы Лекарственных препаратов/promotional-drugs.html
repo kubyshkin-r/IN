@@ -56,6 +56,7 @@
                     <h2>Противопоказания к применеию</h2>
                     <p>Повышенная чувствительность к налоксону. С осторожностью: беременность, период лактации (грудного вскармливания), заболевания сердца и легких; применение у новорожденных детей от матерей с опиоидной зависимостью; детский возраст.</p>
                     
+                    
                 </div>
                 <h2>О компании</h2>
                 <div class="pd__about">
@@ -92,7 +93,22 @@
 
 
 
-
+<script>
+    window.addEventListener('scroll', function() {
+        if(scrollY > 200){
+            if ( document.getElementById("menu11").className.match(/(?:^|\s)pd__menu2(?!\S)/) ){
+                ;
+            }else{
+                document.getElementById('menu11').className += ' pd__menu2';
+            }
+        }
+        else{
+            document.getElementById("menu11").className =
+                document.getElementById("menu11").className.replace
+                ( /(?:^|\s)pd__menu2(?!\S)/g , '' )
+        }
+    });
+</script>
 
     </div><!-- container -->
 
