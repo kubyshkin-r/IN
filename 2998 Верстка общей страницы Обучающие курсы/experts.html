@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Все эксперты</title>
+</head>
+<body>
+    <div class="temp-container">
+        <section class="experts">
+            <!-- <header>
+                <h1>Эксперты</h1>
+            </header> -->
+            <article>
+                <div class="experts-flex">
+                    <div class="experts-filters">
+                        <!-- <div class="experts-filters__fio-search">
+                            <input type="text" class="fio-search-input" placeholder="Поиск по ФИО">
+                        </div> -->
+                            <a href="#" class="filters-btn"><img src="img/icons/filters_icon.svg" alt="" class="filters-img"> Фильтры<span class="count-filters-applied-outside"></span></a>
+                        <div class="filters">
+                            <div class="filters__top">
+                                <div class="filters-heading">
+                                    Фильтры <span class="count-filters-applied-inside"></span>
+                                </div>
+                                <div class="filters-close">
+                                    <img src="img/icons/cross.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="filters__content">
+                                <button class="accordion experts-filter-accordion">Специализация</button>
+                            <div class="accordion-content experts-accordion-content">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="neurology-checkbox" />
+                                        <label for="neurology-checkbox"> <span class="neurology-filter">Всё</span></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="cardiology-checkbox" />
+                                        <label for="cardiology-checkbox"> <span class="cardiology-filter">Личное развитие</span></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="nutriciology-checkbox" />
+                                        <label for="nutriciology-checkbox"> <span class="nutriciology-filter">Управление в здравоохранении</span></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="gynaecology-checkbox" />
+                                        <label for="gynaecology-checkbox"> <span class="gynaecology-filter">Гинекология</span></label>
+                                    </div>
+
+                                    <div class="hidden-group">
+                                        <div class="form-group">
+                                            <input type="checkbox" id="oftalmology-checkbox" />
+                                            <label for="oftalmology-checkbox"><span class="oftalmology-filter">Офтальмология</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="nephrology-checkbox" />
+                                            <label for="nephrology-checkbox"><span class="nephrology-filter">Нефрология</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="pulmonology-checkbox" />
+                                            <label for="pulmonology-checkbox"><span class="pulmonology-filter">Пульмонология</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="pediatry-checkbox" />
+                                            <label for="pediatry-checkbox"><span class="pediatry-filter">Педиатрия</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="checkbox" id="traumatology-checkbox" />
+                                            <label for="traumatology-checkbox"><span class="traumatology-filter">Травматология</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="expand-group">
+                                        <div class="expand-group__button">ещё <span class="hidden-lectors-number">5</span> направлений
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+    
+                            <button class="accordion experts-filter-accordion">Образование</button>
+                            <div class="accordion-content experts-accordion-content">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="author-schools-checkbox" />
+                                        <label for="author-schools-checkbox"><span class="author-schools-filter">Без медицинского образования</span></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="round-table-checkbox" />
+                                        <label for="round-table-checkbox"><span class="round-table-filter">Среднее медицинское</span></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="plenar-session-checkbox" />
+                                        <label for="plenar-session-checkbox"><span class="plenar-session-filter">Высшее медицинское</span></label>
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
+                            
+                        </div>    
+                        
+                    </div>
+                    <div class="expert-cards-and-tags">
+                        <div class="expert-cards">
+
+
+                            <a href="#" alt="#" class="course-card">
+                                <h2 class="card-h2">Ультразвуковой ангиопаспорт лица и&nbsp;шеи в&nbsp;косметологии и&nbsp;эстетической медицине</h2>
+                                <div class="card-autors">
+                                    <img class="card-img" src="https://interneuro.ru/upload/iblock/850/85043f72e822896a6c6e73333ebac859.png" alt="">
+                                    <div class="card-autors-inserted">
+                                        <p class="card-extra">Автор курса:</p>
+                                        <h3 class="card-speakers">Скальный<br>Анатолий Викторович<span><wbr>+2&nbsp;спикера</span></h3>
+                                    </div>
+                                    <div class="card-sale">-40%</div>
+                                </div>
+                                <div class="card-data">
+                                    <p class="card-extra">#Косметология #Неврология</p>
+                                    <ul class="card-text">
+                                        <li>Запись на&nbsp;2022</li>
+                                        <li>Семинар</li>
+                                        <li>36&nbsp;часов</li>
+                                        <li>Очно</li>
+                                        <li class="card-color">12&nbsp;баллов&nbsp;НМО</li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <p class="card-extra">13&nbsp;500&nbsp;₽ – членам АММ</p>
+                                    <div class="sum">
+                                        <p>15&nbsp;000&nbsp;₽</p>
+                                        <p>9&nbsp;000&nbsp;₽</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            
+                            <a href="#" alt="#" class="course-card">
+                                <h2 class="card-h2">Фармакотерапия боли: продвинутый уровень</h2>
+                                <div class="card-autors">
+                                    <img class="card-img" src="https://interneuro.ru/upload/iblock/7e5/7e5fbf1e742dd4a22863e47a31c1804f.jpg" alt="">
+                                    <div class="card-autors-inserted">
+                                        <p class="card-extra">Автор курса:</p>
+                                        <h3 class="card-speakers">Данилов<br>Андрей Борисович</h3>
+                                    </div>
+                                    <!-- <div class="card-sale">-40%</div> -->
+                                </div>
+                                <div class="card-data">
+                                    <p class="card-extra">#Косметология #Неврология #Неврология</p>
+                                    <ul class="card-text">
+                                        <li>Повышения квалификации</li>
+                                        <li>Семинар</li>
+                                        <li>36&nbsp;часов</li>
+                                        <li>Очно</li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <p class="card-extra">13&nbsp;500&nbsp;₽ – членам АММ</p>
+                                    <div class="sum">
+                                        <p>15&nbsp;000&nbsp;₽</p>
+             
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" alt="#" class="course-card">
+                                <h2 class="card-h2">Управление болью: методы диагностики и&nbsp;лечения</h2>
+                                <div class="card-autors">
+                                    <img class="card-img" src="https://interneuro.ru/upload/iblock/e62/e626e00558c7738c68f6c6b7cb3482a3.jpg" alt="">
+                                    <div class="card-autors-inserted">
+                                        <p class="card-extra">Автор курса:</p>
+                                        <h3 class="card-speakers">Данилов<br>Андрей Борисович<span><wbr>+2&nbsp;спикера</span></h3>
+                                    </div>
+
+                                </div>
+                                <div class="card-data">
+                                    <p class="card-extra">#Косметология #Неврология</p>
+                                    <ul class="card-text">
+                                        <li>Программа повышения квалификации</li>
+                                        <li>Семинар</li>
+                                        <li>36&nbsp;часов</li>
+                                        <li>Очно</li>
+                                        <li class="card-color">12&nbsp;баллов&nbsp;НМО</li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <p class="card-extra">120&nbsp;500&nbsp;₽ – членам АММ</p>
+                                    <div class="sum">
+                                        <p>150&nbsp;000&nbsp;₽</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" alt="#" class="course-card">
+                                <h2 class="card-h2">Управление болью: методы диагностики и лечения</h2>
+                                <div class="card-autors">
+                                    <img class="card-img" src="https://interneuro.ru/upload/iblock/850/85043f72e822896a6c6e73333ebac859.png" alt="">
+                                    <div class="card-autors-inserted">
+                                        <p class="card-extra">Автор курса:</p>
+                                        <h3 class="card-speakers">Скальный<br>Анатолий Викторович<span><wbr>+2&nbsp;спикера</span></h3>
+                                    </div>
+                                    <div class="card-sale">-40%</div>
+                                </div>
+                                <div class="card-data">
+                                    <p class="card-extra">#Косметология </p>
+                                    <ul class="card-text">
+                                        <li>Запись на 2022</li>
+                                        <li>Семинар</li>
+                                        <li>36 часов</li>
+                                        <li>Очно</li>
+                                        <li class="card-color">12&nbsp;баллов&nbsp;НМО</li>
+                                    </ul>
+                                </div>
+                                <div class="card-price">
+                                    <p class="card-extra">13&nbsp;500&nbsp;₽ – членам АММ</p>
+                                    <div class="sum">
+                                        <p>15&nbsp;000&nbsp;₽</p>
+                                        <p>9&nbsp;000&nbsp;₽</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="show-more">
+                            <button class="show-more__btn">Показать ещё</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </article>
+            
+        </section>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
