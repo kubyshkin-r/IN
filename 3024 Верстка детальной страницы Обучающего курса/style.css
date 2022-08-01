@@ -1,0 +1,1702 @@
+/* 
+
+В папке с изображениями оставляем только svg файлы. Остальные там нужны только для демонстрации, в готовом продукте их быть не должно! 
+
+*/
+
+/* 
+надо исправить баг кнопки  на айфоне;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+:root {
+    --project-text-color: #333;
+    --project-text-accent: #BABABA;
+    --project-color-base: #28798E;
+    --project-color-accent: #D3157C;
+}
+::marker {
+    font-size: 17px;
+}
+a:hover,
+a:active,
+a:visited {
+    color: var(--project-text-color);
+    text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+/* предзагрузка картинок */
+.course-brief::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(https://interneuro.ru/upload/deleted-me/arrow-amm-hover.svg) url(https://interneuro.ru/upload/deleted-me/download-hover.svg) url(https://interneuro.ru/upload/deleted-me/arrow-accordion-hover.svg) url(https://interneuro.ru/upload/deleted-me/arrow-slider-hover.svg);
+}
+.course-wrapper {
+    font: 400 20px/29px 'Roboto', sans-serif;
+    color: var(--project-text-color);
+    margin-bottom: 48px;
+}
+.course-title {
+    margin: 72px 0 49px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 100%;
+}
+.course-brief {
+    position: relative;
+}
+.course-brief-block1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.course-brief-ul {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: -7px;
+    padding: 0;
+}
+.course-brief-ul li {
+    position: relative;
+    display: inline-block;
+    margin-top: 4px;
+    padding-left: 22px;
+    padding-right: 10px;
+    font: 400 20px/24px 'Roboto', sans-serif;
+    list-style-type: none;
+    background-image: none;
+}
+.course-brief-ul li:first-child {
+    content: none;
+    padding-left: 0;
+}
+.course-brief-ul li::before {
+    position: absolute;
+    content: '•';
+    left: 0;
+    font-weight: 800;
+}
+.course-brief-ul li:first-child:before {
+    content: none;
+}
+.course-nmo {
+    color: var(--project-color-accent);
+}
+.course-nmo::before {
+    color: var(--project-text-color);
+}
+.course-brief-buttom {
+    position: relative;
+    display: inline-block;
+    padding: 26px 55px 25px;
+    font: 700 20px/23px 'Roboto', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: var(--project-text-color);
+    border: 3px solid var(--project-text-color);
+    box-shadow: 0 0 0 var(--project-color-base);
+    transition: box-shadow 0.3s;
+}
+.course-brief-buttom:hover {
+    box-shadow: 8px 8px 0 var(--project-color-base);
+}
+.course-brief-buttom:active {
+    top: 1px;
+    left: 1px;
+    box-shadow: 6px 6px 0 var(--project-color-base);
+    transition: box-shadow 0.001s;
+}
+.course-brief-buttom:visited {
+    color: var(--project-text-color);
+    text-decoration: none;
+}
+.course-brief-hr {
+    margin: 17px 0 16px;
+    width: 0;
+    height: 3px;
+    background-color: var(--project-text-color);
+    border: none;
+    opacity: 1;
+    animation-name: slidein;
+    animation-delay: 0.3s;
+    animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+}
+.course-brief-block2 {
+    display: flex;
+}
+.course-brief-price {
+    margin-right: 16px;
+    font: 400 20px/24px 'Roboto', sans-serif;
+    color: var(--project-text-color);
+}
+.course-brief-price div {
+    margin-bottom: 8px;
+    font: 400 16px/19px 'Roboto', sans-serif;
+    color: var(--project-text-accent);
+}
+.course-brief-entry {
+    position: relative;
+    display: block;
+    padding-right: 10px;
+    font: 400 16px/19px 'Roboto', sans-serif;
+    text-decoration: none;
+    color: var(--project-color-base);
+}
+.course-brief-entry:hover {
+    color: var(--project-color-accent);
+}
+.course-brief-entry:visited {
+    color: var(--project-color-base);
+    text-decoration: none;
+}
+.course-brief-entry::before {
+    position: absolute;
+    top: -3px;
+    right: 0;
+    content: url(https://interneuro.ru/upload/deleted-me/arrow-amm.svg);
+}
+.course-brief-entry:hover::before {
+    content: url(https://interneuro.ru/upload/deleted-me/arrow-amm-hover.svg);
+}
+.course-brief-tag {
+    margin-left: auto;
+    font: 400 16px/19px 'Roboto', sans-serif;
+    color: var(--project-text-accent);
+}
+.course-descr {
+    padding: 86px 112px 86px;
+    font: 400 32px/45px 'Roboto', sans-serif;
+}
+.load-more-container {
+    position: relative;
+    padding: 91px 112px 87px;
+    font: 400 20px/29px 'Roboto', sans-serif;
+    border-top: 1px solid var(--project-text-color);
+}
+.load-more-container::before {
+    position: absolute;
+    content: 'Подробнее о курсе';
+    top: 8px;
+    left: 0;
+    font: 400 16px/19px 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+.load-more-block-text {
+    display: inline;
+    padding: 0;
+    list-style-type: none;
+    font: inherit;
+}
+.load-more-block-text ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+.load-more-block-text li {
+    margin-bottom: 5px;
+    font: inherit;
+}
+.load-more-block-text ::marker {
+    color: var(--project-color-base);
+}
+.load-more-block-text section,
+.load-more-block-text p {
+    font: inherit;
+}
+.load-more-block-text section:nth-child(2) {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.4s, max-height 0.4s 0.1s;
+}
+.load-more-container .load-more-btn {
+    position: relative;
+    display: block;
+    margin-top: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.load-more-btn .unloaded,
+.load-more-btn .loaded {
+    position: relative;
+    display: inline-block;
+    font: 700 20px/29px 'Roboto Condensed', sans-serif;
+}
+.load-more-btn .unloaded::after,
+.load-more-btn .loaded::after {
+    position: absolute;
+    content: '';
+    top: 7px;
+    right: -14px;
+    width: 12px;
+    height: 16px;
+    background-image: url(https://interneuro.ru/upload/deleted-me/arrow-more.svg);
+}
+.load-more-btn .loaded::after {
+    transform: rotate(180deg);
+}
+.load-more-container .load-more-btn .loaded {
+    display: none;
+}
+.load-more-container #load-more {
+    display: none;
+}
+.load-more-container #load-more:checked~.load-more-block-text section:nth-child(2) {
+    max-height: 1000px;
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.4s 0.2s, max-height 1s;
+}
+.load-more-container #load-more:checked~.load-more-btn .loaded {
+    display: inline-block;
+}
+.load-more-container #load-more:checked~.load-more-btn .unloaded {
+    display: none;
+}
+.course-h2 {
+    margin-bottom: 40px;
+    font: 700 60px/70px 'Roboto Condensed', sans-serif;
+}
+.course-head-job-title {
+    margin-bottom: 8px;
+    font: 400 16px/19px 'Roboto Condensed', sans-serif;
+    color: var(--project-text-accent);
+}
+.course-head-name {
+    font: 700 44px/44px 'Roboto Condensed', sans-serif;
+}
+.course-head-name br {
+    display: none;
+}
+.course-head-descr {
+    margin-top: -8px;
+    font: 400 24px/32px 'Roboto', sans-serif;
+}
+.course-speakers-wrapper {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 124px;
+}
+.course-head {
+    display: grid;
+    gap: 24px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--project-text-color);
+    margin-bottom: 24px;
+    grid-template-columns: 1fr 424px;
+    grid-template-rows: minmax(72px, max-content) 1fr;
+    grid-template-areas:
+        'B A'
+        'C A';
+}
+.course-head-img {
+    display: grid;
+    grid-area: A;
+}
+.course-head-title {
+    display: grid;
+    grid-area: B;
+    align-self: start;
+}
+.course-head-descr {
+    display: grid;
+    grid-area: C;
+}
+.course-speaker {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(88px, max-content) 1fr;
+    grid-template-rows: minmax(88px, max-content) 1fr;
+}
+.course-speaker-img {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 88px;
+}
+.course-speaker-title {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+.course-speaker-descr {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    font: 400 20px/29px 'Roboto', sans-serif;
+}
+.course-speaker-job-title {
+    margin-bottom: 17px;
+    font: 400 16px/19px 'Roboto Condensed', sans-serif;
+    color: var(--project-text-accent);
+}
+.course-speaker-name {
+    font: 700 26px/26px 'Roboto Condensed', sans-serif;
+}
+.course-listen-wrapper {
+    display: flex;
+    margin-bottom: 107px;
+    font: 400 24px/32px 'Roboto', sans-serif;
+}
+.course-features_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+.course-listen-wrapper ul {
+    padding-left: 22px;
+}
+.course-listen-wrapper li {
+    margin-bottom: 16px;
+}
+.course-listen-wrapper span {
+    display: inline-block;
+    margin: 8px 0 24px;
+    text-transform: uppercase;
+    font: 400 16px/19px 'Roboto Condensed', sans-serif;
+}
+.course-listen-special {
+    width: 51%;
+    padding-right: 14px;
+    font: 400 24px/32px 'Roboto', sans-serif;
+    border-top: 1px solid var(--project-text-color);
+}
+.course-listen-special *:not(span),
+.course-listen-mspecial *:not(span) {
+    font: 400 24px/32px 'Roboto', sans-serif;
+}
+.course-listen-mspecial {
+    width: 49%;
+    border-top: 1px solid var(--project-text-color);
+}
+.course-listen-mspecial li {
+    padding-left: 3px;
+}
+.course-features_block {
+    margin-bottom: 48px;
+}
+.course-features_block:nth-child(odd) {
+    width: 51%;
+    padding-right: 24px;
+}
+.course-features_block:nth-child(even) {
+    width: 49%;
+}
+.course-features-num {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 16px;
+    padding-top: 6px;
+    font: 400 24px/32px 'Roboto', sans-serif;
+    text-align: center;
+    color: #fff;
+    background-color: var(--project-color-accent);
+}
+.course-features {
+    position: relative;
+    margin: -77px 0 37px;
+    text-align: end;
+}
+.course-features a {
+    display: inline-block;
+    margin-left: 32px;
+    padding-right: 15px;
+    text-decoration: none;
+    font: 400 16px/19px 'Roboto', sans-serif;
+    color: var(--project-color-base);
+    background: url(https://interneuro.ru/upload/deleted-me/download.svg) no-repeat right center;
+}
+.course-features a:hover {
+    color: var(--project-color-accent);
+    background-image: url(https://interneuro.ru/upload/deleted-me/download-hover.svg);
+}
+.course-features:visited {
+    color: var(--project-color-base);
+    text-decoration: none;
+}
+.course-accordion-wrapper {
+    margin-bottom: 88px;
+}
+.accordion-item+.course-accordion-item,
+.course-accordion-item {
+    border: none;
+    border-top: 3px solid var(--project-text-color);
+    border-radius: 0;
+}
+.course-accordion-item:last-child {
+    border-bottom: 3px solid var(--project-text-color);
+}
+.course-accordion-item:first-of-type {
+    border-radius: 0;
+}
+.course-accordion-item .accordion-button {
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s;
+}
+.course-accordion-item .accordion-button:hover {
+    color: var(--project-color-base);
+}
+.course-accordion-item .accordion-button:not(.collapsed) {
+    color: var(--project-text-color);
+    background-color: transparent;
+    box-shadow: none;
+    transition: color 0.3s;
+}
+.course-accordion-item .accordion-button:hover:not(.collapsed) {
+    color: var(--project-color-base);
+}
+.course-accordion-item .accordion-button:focus {
+    z-index: 3;
+    border-color: none;
+    box-shadow: none;
+}
+.accordion-button::after {
+    content: "";
+    flex-shrink: 0;
+    width: 28px;
+    height: 34px;
+    margin-left: auto;
+    background-image: url(https://interneuro.ru/upload/deleted-me/arrow-accordion.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: var(--bs-accordion-btn-icon-transition);
+}
+.accordion-button:hover::after {
+    background-image: url(https://interneuro.ru/upload/deleted-me/arrow-accordion-hover.svg);
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url(https://interneuro.ru/upload/deleted-me/arrow-accordion.svg);
+    transform: var(--bs-accordion-btn-icon-transform);
+}
+.accordion-button:not(.collapsed):hover::after {
+    background-image: url(https://interneuro.ru/upload/deleted-me/arrow-accordion-hover.svg);
+}
+.course-accordion-wrapper .accordion-button {
+    padding: 18px 0;
+    font: 400 32px/40px 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--project-text-color);
+    text-align: left;
+}
+.course-accordion-wrapper .accordion-body {
+    padding: 9px 0 5px;
+    color: var(--project-text-color);
+}
+.course-accordion-wrapper .accordion-body h4 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 140%;
+    color: var(--project-text-color);
+}
+.course-accordion-wrapper .accordion-body * {
+    font: 400 20px/29px 'Roboto', sans-serif;
+}
+.course-accordion-wrapper .accordion-body li {
+    margin-bottom: 8px;
+}
+.course-accordion-wrapper .accordion-body ul {
+    margin-top: 16px;
+}
+.events-filter-accordion,
+.events-accordion-content {
+    max-width: 100%;
+}
+.course-result-wrapper {
+    margin-bottom: 106px;
+    padding: 55px 112px 40px;
+    background-color: rgba(211, 21, 124, 0.05);
+}
+h2.course-result-h2 {
+    margin-bottom: 30px;
+    font: 700 60px/70px 'Roboto Condensed', sans-serif;
+    color: var(--project-color-accent);
+}
+.course-result-wrapper * {
+    font: 400 20px/29px 'Roboto', sans-serif;
+}
+.course-result-wrapper ::marker {
+    color: var(--project-color-accent);
+    font-size: 26px;
+}
+.course-result-wrapper ul {
+    padding-left: 23px;
+}
+.course-result-wrapper li {
+    margin-bottom: 14px;
+}
+.course-education-wrapper {
+    display: flex;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+}
+.course-education-block {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 25%;
+    min-width: 270px;
+    padding: 24px 0 30px 24px;
+    border-top: 1px solid var(--project-text-color);
+}
+.course-education-block:first-child,
+.course-education-block:nth-child(5n) {
+    padding-left: 0;
+}
+.course-education-block::after {
+    position: absolute;
+    content: "";
+    top: -1px;
+    right: -1px;
+    width: 1px;
+    height: 43px;
+    background-color: var(--project-text-color);
+}
+.course-education-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 83px;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--project-color-base);
+    background-image: url(https://interneuro.ru/upload/deleted-me/flower.svg);
+}
+.course-education-block h3 {
+    display: flex;
+    padding-left: 20px;
+    width: calc(100% - 84px);
+    height: 83px;
+    font: 400 24px/32px 'Roboto', sans-serif;
+    font-weight: 700;
+    align-items: center;
+}
+.course-education-block p {
+    font: 400 20px/29px 'Roboto', sans-serif;
+    padding-top: 8px;
+}
+.course-cta-0 {
+    height: 1053px;
+}
+.course-cta-wrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 88px 0 15px;
+    color: #fff;
+    background-color: var(--project-color-base);
+}
+.course-cta-container {
+    max-width: 678px;
+    margin: auto;
+    padding: 0 15px;
+}
+.course-cta-container1 {
+    max-width: 1350px;
+    margin: auto;
+}
+.course-cta-h2 {
+    font: 700 60px/70px 'Roboto Condensed', sans-serif;
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.course-cta-p {
+    font: 400 24px/32px 'Roboto', sans-serif;
+    margin-bottom: 48px;
+    text-align: center;
+}
+.course-cta-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 21px 24px 20px;
+    font: 400 20px/29px 'Roboto', sans-serif;
+    color: #fff;
+    background-color: var(--project-color-base);
+    border: 1px solid #fff;
+}
+.course-cta-form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+.course-cta-form input:focus-visible {
+    border-radius: 0;
+    outline: none;
+}
+.course-cta-form input[type="submit"] {
+    position: relative;
+    height: 80px;
+    margin: 48px 0 16px;
+    font: 700 20px/23px 'Roboto', sans-serif;
+    color: var(--project-color-base);
+    background-color: #fff;
+    box-shadow: 0 0 0 #bed7dd;
+    transition: box-shadow 0.3s;
+}
+.course-cta-form input[type="submit"]:hover {
+    box-shadow: 8px 8px 0 #bed7dd;
+}
+.course-cta-form input[type="submit"]:active {
+    top: 1px;
+    left: 1px;
+    box-shadow: 6px 6px 0 #bed7dd;
+    transition: box-shadow 0.001s;
+}
+.course-cta-notes {
+    font: 400 16px/19px 'Roboto', sans-serif;
+    color: #fff;
+    opacity: 0.4;
+}
+.course-cta-name {
+    margin-right: 20px;
+    font: 400 20px/24px 'Roboto', sans-serif;
+}
+.course-cta-notes a {
+    font: 400 16px/19px 'Roboto', sans-serif;
+    color: #fff;
+}
+.course-cta-bottom {
+    margin: 74px 15px;
+}
+.course-cta-block1 {
+    flex-wrap: wrap;
+}
+.course-cta-hr {
+    margin: 14px 0 13px;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    border: none;
+    opacity: 1;
+}
+.course-cta-price {
+    font: 400 20px/24px 'Roboto', sans-serif;
+    color: #fff;
+}
+.course-cta-price span {
+    display: inline-block;
+    margin-left: 16px;
+    opacity: 0.5;
+}
+.course-cta-entry {
+    position: relative;
+    margin-bottom: -5px;
+    padding-right: 10px;
+    font: 400 16px/19px 'Roboto', sans-serif;
+    color: #fff;
+}
+.course-cta-entry::before {
+    content: url(https://interneuro.ru/upload/deleted-me/arrow-amm2.svg);
+    position: absolute;
+    top: -3px;
+    right: 0;
+}
+.course-cta-bottom .course-cta-ul li,
+.course-cta-entry {
+    font: 400 16px/19px 'Roboto', sans-serif;
+    opacity: 0.4;
+}
+
+/* Заголовок и стрелки на слайдеры */
+.course-reviews-h2 {
+    margin-bottom: 25px;
+    font: 700 60px/70px 'Roboto Condensed', sans-serif;
+}
+.course-reviews-arrows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: -78px;
+    margin-bottom: 29px;
+}
+.course-reviews-arrowl,
+.course-reviews-arrowr {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--project-text-color);
+    background-image: url(https://interneuro.ru/upload/deleted-me/arrow-slider.svg);
+    background-position: 48% center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.course-reviews-arrowr {
+    transform: rotate(180deg);
+    margin-left: 25px;
+}
+.course-reviews-arrowl:hover,
+.course-reviews-arrowr:hover {
+    border-color: var(--project-color-base);
+    background-image: url(https://interneuro.ru/upload/deleted-me/arrow-slider-hover.svg);
+}
+
+/* Отзывы */
+.course-reviews-wrapper {
+    display: flex;
+    margin-bottom: 88px;
+}
+.course-reviews-block {
+    width: 424px;
+    min-height: 499px;
+    margin-right: 24px;
+    padding: 32px 24px 17px;
+    background-color: #F6F7F8;
+}
+.course-reviews-block:last-child {
+    margin-right: 0;
+}
+.course-reviews-title {
+    display: flex;
+    margin-bottom: 24px;
+}
+.course-reviews-img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    /* строчка ниже на проде не нужна */
+    margin-right: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.course-reviews-h4 {
+    align-self: center;
+    margin: 0;
+    font: 700 24px/27px 'Roboto', sans-serif;
+    overflow: hidden;
+}
+.course-reviews-h4 span {
+    display: block;
+    margin-top: 4px;
+    font: 400 20px/29px 'Roboto', sans-serif;
+    color: var(--project-text-accent);
+}
+.course-reviews-content,
+.course-reviews-content * {
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+    font: 400 16px/23px 'Roboto', sans-serif;
+}
+.course-reviews-photo {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.course-reviews-photo::after {
+    content: url(https://interneuro.ru/upload/deleted-me/magnifier.svg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 47px;
+    height: 47px;
+    padding: 12px;
+    border: 1px solid var(--project-color-base);
+    background-color: var(--project-color-base);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* .course-reviews-photo:hover::after {
+    background-color: #fff;
+    content: url(https://interneuro.ru/upload/deleted-me/magnifier-hover.svg);
+} */
+
+/* Дополнительные материалы */
+.course-dop-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: left;
+}
+.web-books__item {
+    position: relative;
+    width: 23.5%;
+    margin-top: 48px;
+    margin-right: 2%;
+    text-decoration: none;
+    color: var(--project-text-color);
+    transition: border-color 0.3s, color 0.3s;
+}
+.web-books__item:nth-child(4) {
+    /* не для продакшена */
+    margin-right: 0;
+}
+.web-books__images {
+    width: 100%;
+    height: 338px;
+    padding: 31px 52px;
+    display: block;
+    object-fit: cover;
+    border: 1px solid #F6F7F8;
+    background-color: #F6F7F8;
+    transition: border-color 0.3s;
+}
+.web-books__item:hover .web-books__images {
+    border-color: var(--project-color-base);
+}
+.web-books__subtitle {
+    max-height: 95px;
+    margin: 24px 0 4px;
+    font: 700 20px/23px 'Roboto', sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    transition: color 0.3s;
+}
+.web-books__item:hover .web-books__subtitle {
+    color: var(--project-color-base);
+}
+.web-books__item:visited .web-books__subtitle {
+    text-decoration: none;
+    /* включить в продакшне */
+    /* color: var(--project-text-color); */
+}
+.web-books__descriptions {
+    margin-top: 8px;
+    font: 400 18px/26px 'Roboto', sans-serif;
+    transition: color 0.3s;
+}
+.web-books__item:hover .web-books__descriptions {
+    color: var(--project-color-base);
+}
+.web-books__item:visited .web-books__descriptions {
+    text-decoration: none;
+    /* включить в продакшне */
+    /* color: var(--project-text-color); */
+}
+
+/* Рекомендуем вам */
+.course-recommendations-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 133px;
+}
+.course-recommendations-wrapper .course-card {
+    max-width: 48.9%;
+    padding: 40px 23px 48px;
+    font-weight: 700;
+    color: var(--project-text-color);
+    text-decoration: none;
+    background-color: #F6F7F8;
+    transition: color 0.3s, border-color 0.3s;
+}
+.course-recommendations-wrapper .course-card:hover,
+.course-recommendations-wrapper .course-card:hover .card-color,
+.course-recommendations-wrapper .course-card:hover .card-text,
+.course-recommendations-wrapper .course-card:hover .sum p {
+    color: var(--project-color-base);
+    border-color: var(--project-color-base);
+    transition: color 0.3s;
+}
+.course-recommendations-wrapper .course-card:first-child {
+    /* не для продакшена */
+    margin-right: 24px;
+}
+.course-recommendations-wrapper .course-cardr-h3 {
+    margin: 0 0 24px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 38px;
+}
+.course-recommendations-wrapper .card-autors {
+    display: flex;
+    width: 100%;
+}
+.course-recommendations-wrapper .card-img {
+    display: inline-block;
+    width: 88px;
+    height: 88px;
+    margin-right: 24px;
+}
+.course-recommendations-wrapper .card-autors-inserted {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.course-recommendations-wrapper .card-extra {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: var(--project-text-accent);
+}
+.course-recommendations-wrapper .card-speakers {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+}
+.course-recommendations-wrapper .card-speakers span {
+    margin-left: 16px;
+}
+.course-recommendations-wrapper .card-sale {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 88px;
+    margin-left: auto;
+    font-size: 26px;
+    line-height: 26px;
+    color: #fff;
+    background-color: var(--project-color-accent);
+    border-radius: 50%;
+    transition: background-color 0.5s;
+}
+.course-recommendations-wrapper .course-card:hover .card-sale {
+    background-color: var(--project-color-base);
+}
+.course-recommendations-wrapper .card-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 53px;
+    margin-top: -22px;
+    margin-left: 72%;
+    padding-left: 2%;
+    border-left: 1px solid var(--project-text-color);
+    transition: border-color 0.3s;
+}
+.course-recommendations-wrapper .card-data {
+    width: 100%;
+    margin-top: 32px;
+}
+.course-recommendations-wrapper .card-price .card-extra {
+    margin-top: 8px;
+}
+.course-recommendations-wrapper ul.card-text {
+    width: 100%;
+    margin: 0 0 8px;
+    padding: 0;
+    border-bottom: 1px solid var(--project-text-color);
+}
+.course-recommendations-wrapper .card-text+.card-extra {
+    width: 71%;
+    height: 14px;
+    overflow: hidden;
+}
+.course-recommendations-wrapper ul.card-text li {
+    position: relative;
+    display: inline-block;
+    margin-top: 4px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 4px;
+    font-size: 16px;
+    line-height: 19px;
+    list-style-type: none;
+    background-image: none;
+}
+.course-recommendations-wrapper ul.card-text li:first-child {
+    padding-left: 0;
+}
+.course-recommendations-wrapper ul.card-text li:nth-child(1n+3) {
+    font-weight: 400;
+}
+.course-recommendations-wrapper ul.card-text li::before {
+    position: absolute;
+    content: '•';
+    left: 0;
+    font-weight: 800;
+}
+.course-recommendations-wrapper ul.card-text li:first-child:before {
+    content: none;
+}
+.course-recommendations-wrapper .card-color {
+    color: var(--project-color-accent);
+}
+.course-recommendations-wrapper .course-card:hover .card-price {
+    border-left-color: var(--project-color-base);
+}
+.course-recommendations-wrapper .sum:only-child {
+    margin-top: auto;
+}
+.course-recommendations-wrapper .sum p {
+    padding: 0;
+    font-size: 18px;
+    line-height: 21px;
+}
+.course-recommendations-wrapper .sum p:first-child {
+    display: inline;
+    margin-right: 3%;
+    font-weight: 500;
+    text-decoration-line: line-through;
+    transition: color 0.3s;
+}
+.course-recommendations-wrapper .course-card:hover .sum p:first-child {
+    color: var(--project-color-base);
+}
+.course-recommendations-wrapper .sum p:last-child {
+    display: inline;
+    margin-top: 4px;
+    font-weight: 500;
+    color: var(--project-color-accent);
+}
+.course-recommendations-wrapper .sum p:only-child {
+    text-align: right;
+    text-decoration-line: none;
+    color: var(--project-text-color);
+}
+.course-recommendations-wrapper .experts-flex {
+    flex-direction: column;
+}
+.course-recommendations-wrapper .course-cardr-h3 {
+    font-size: 27px;
+    line-height: 29px;
+}
+
+@keyframes slidein {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    /* Дополнительные материалы */
+    .web-books__images {
+        height: 269px;
+        padding: 22px 30px;
+    }
+
+    /* Рекомендуем вам */
+    .course-recommendations-wrapper .course-card {
+        max-width: 48.7%;
+    }
+    .course-recommendations-wrapper .card-price {
+        margin-left: 60%;
+    }
+    .course-recommendations-wrapper .card-text+.card-extra {
+        width: 58%;
+    }
+    .course-recommendations-wrapper .course-cardr-h3 {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+    .course-recommendations-wrapper .card-speakers {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    .course-title {
+        font-size: 56px;
+    }
+    .course-descr {
+        padding: 75px 74px 75px;
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .course-brief-buttom {
+        padding: 20px 40px 21px;
+    }
+    .load-more-container {
+        padding: 76px 74px 76px;
+    }
+    .course-head {
+        grid-template-columns: 1fr 281px;
+    }
+    .course-head-name {
+        font-size: 26px;
+        line-height: 26px;
+    }
+    .course-head-descr {
+        font-size: 20px;
+        line-height: 29px;
+    }
+    .course-speakers-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .course-result-wrapper {
+        padding: 34px 80px 40px;
+    }
+    .course-cta-bottom .course-cta-ul li,
+    .course-cta-entry {
+        margin-top: 5px;
+    }
+
+    /* Дополнительные материалы */
+    .web-books__item {
+        /* не для продакшена */
+        width: 31.3%;
+    }
+
+    /* Рекомендуем вам */
+    .course-recommendations-wrapper .card-sale {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 21px;
+    }
+    .course-recommendations-wrapper .card-data {
+        margin-top: 15px;
+    }
+    .course-recommendations-wrapper ul.card-text li {
+        padding-bottom: 0;
+        font-size: 14px;
+        line-height: 12px;
+    }
+    .course-recommendations-wrapper .course-cardr-h3,
+    .course-recommendations-wrapper .card-speakers {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .course-recommendations-wrapper .course-card {
+        max-width: 48.9%;
+        padding: 25px 16px 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    ::marker {
+        font-size: 14px;
+    }
+    .course-h2,
+    .course-reviews-h2 {
+        font-size: 28px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+    .course-features a {
+        display: inline-block;
+        margin: 0 35% 16px 0;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    .course-features {
+        margin: -93px 0 37px;
+    }
+    .course-title {
+        margin: 30px 0 32px;
+        font-size: 32px;
+    }
+    .course-brief {
+        padding-bottom: 79px;
+    }
+    .course-brief-block1 {
+        flex-wrap: wrap;
+    }
+    .course-brief-ul {
+        display: block;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .course-brief-ul li,
+    .course-brief-ul li:first-child {
+        display: block;
+        margin-top: 8px;
+        padding-left: 14px;
+        font: 15px/18px 'Roboto', sans-serif;
+    }
+    .course-brief-ul li:first-child:before {
+        content: '•';
+    }
+    .course-brief-buttom {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        padding: 16px;
+        font: 15px/18px 'Roboto', sans-serif;
+    }
+    .course-brief-buttom:hover {
+        box-shadow: none;
+    }
+    .course-brief-buttom:active {
+        top: auto;
+        left: 0;
+        box-shadow: none;
+    }
+    .course-brief-hr {
+        display: none;
+    }
+    .course-brief-block2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .course-brief-price {
+        width: 45%;
+        font: 15px/18px 'Roboto', sans-serif;
+    }
+    .course-brief-price div {
+        font: 13px/16px 'Roboto', sans-serif;
+    }
+    .course-brief-entry {
+        font: 13px/15px 'Roboto', sans-serif;
+    }
+    .course-brief-entry:hover {
+        color: var(--project-color-base);
+    }
+    .course-brief-entry:hover::before {
+        content: url(https://interneuro.ru/upload/deleted-me/arrow-amm.svg);
+    }
+    .course-brief-tag {
+        width: 100%;
+        order: -1;
+        margin-bottom: 24px;
+        padding-bottom: 4px;
+        border-bottom: 3px solid var(--project-text-color);
+        text-align: right;
+        font: 13px/15px 'Roboto', sans-serif;
+    }
+    .course-descr {
+        padding: 64px 0;
+        font: 18px/25px 'Roboto', sans-serif;
+    }
+    .load-more-container {
+        position: relative;
+        padding: 47px 0 64px;
+        font: 15px/22px 'Roboto', sans-serif;
+    }
+    .load-more-container::before {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .load-more-btn .unloaded,
+    .load-more-btn .loaded {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .load-more-btn .unloaded::after,
+    .load-more-btn .loaded::after {
+        top: 5px;
+        width: 9px;
+        height: 13px;
+    }
+    .course-listen-mspecial ul {
+        margin-top: 0;
+    }
+    .course-listen-wrapper li {
+        margin-bottom: 7px;
+    }
+    .course-features_block:nth-child(odd),
+    .course-features_block:nth-child(even) {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 9px;
+    }
+    .course-features-num {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 8px;
+        padding-top: 0;
+        font: 400 18px/32px 'Roboto', sans-serif;
+    }
+    .course-features_block p {
+        margin-top: 8px;
+        font: 400 15px/22px 'Roboto', sans-serif;
+    }
+    .course-features_wrapper {
+        margin-bottom: 40px;
+    }
+    .course-features {
+        margin: -7px 0 0;
+        text-align: start;
+    }
+    .course-accordion-wrapper .accordion-button {
+        font: 700 18px/20px 'Roboto', sans-serif;
+    }
+    .course-accordion-wrapper .accordion-body h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 17px;
+    }
+    .course-accordion-wrapper .accordion-body * {
+        font: 400 15px/22px 'Roboto', sans-serif;
+    }
+    .course-head {
+        gap: 16px;
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 32px;
+        grid-template-columns: minmax(72px, max-content) 1fr;
+        grid-template-rows: minmax(72px, max-content) 1fr;
+        grid-template-areas:
+            'A B'
+            'C C';
+    }
+    .course-head-job-title {
+        font-size: 13px;
+        line-height: 15px;
+        color: var(--project-text-accent);
+    }
+    .course-head-name {
+        font: 700 18px/20px 'Roboto Condensed', sans-serif;
+    }
+    .course-head-img {
+        width: 72px;
+    }
+    .course-head-name br {
+        display: block;
+    }
+    .course-head-descr {
+        margin-top: 0;
+        font: 15px/22px 'Roboto', sans-serif;
+    }
+    .course-speakers-wrapper {
+        grid-gap: 32px;
+        grid-template-columns: 1fr;
+        margin-bottom: 64px;
+    }
+    .course-speaker {
+        gap: 16px;
+        grid-template-columns: minmax(72px, max-content) 1fr;
+        grid-template-rows: minmax(72px, max-content) 1fr;
+    }
+    .course-speaker-img {
+        width: 72px;
+    }
+    .course-speaker-job-title {
+        margin-bottom: 0;
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .course-speaker-name {
+        margin-bottom: 0;
+        font: 700 18px/20px 'Roboto Condensed', sans-serif;
+    }
+    .course-speaker-descr {
+        font: 15px/22px 'Roboto', sans-serif;
+    }
+    .course-result-wrapper {
+        padding: 52px 15px 40px;
+        margin: 0 -15px 65px;
+    }
+    .course-result-h2 {
+        font-size: 28px;
+        line-height: 28px;
+        margin: 0 0 21px;
+    }
+    .course-result-wrapper li {
+        margin-bottom: 14px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .course-education-block {
+        border-top-color: transparent;
+        padding-left: 15px;
+        border-left: 1px solid var(--project-text-color);
+    }
+    .course-listen-wrapper {
+        flex-wrap: wrap;
+        margin-bottom: 64px;
+        font: 15px/22px 'Roboto', sans-serif;
+    }
+    .course-listen-wrapper span {
+        margin: 8px 0;
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .course-listen-wrapper ul {
+        padding-left: 16px;
+    }
+    .course-listen-wrapper li {
+        margin-bottom: 10px;
+    }
+    .course-listen-special {
+        width: 100%;
+        padding-right: 0;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .course-listen-special *:not(span),
+    .course-listen-mspecial *:not(span) {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .course-listen-mspecial {
+        width: 100%;
+        margin-top: 24px;
+    }
+    .course-listen-mspecial li {
+        padding-left: 3px;
+    }
+    .course-features_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+    .course-education-block,
+    .course-education-block:first-child,
+    .course-education-block:nth-child(5n) {
+        width: 100%;
+        padding-top: 0;
+        padding-left: 16px;
+    }
+    .course-education-num {
+        width: 57px;
+        height: 57px;
+        font-size: 21px;
+        background-size: contain;
+    }
+    .course-education-block h3 {
+        padding-left: 14px;
+        width: calc(100% - 57px);
+        height: 57px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .course-education-block p {
+        font-size: 15px;
+        line-height: 22px;
+        padding-top: 8px;
+        margin-top: 0;
+    }
+    .course-education-block::after {
+        top: auto;
+        bottom: 22px;
+        left: -1px;
+        width: 16px;
+        height: 1px;
+    }
+    .course-education-block:last-child::after {
+        display: none;
+    }
+    .course-education-block:last-child {
+        padding-bottom: 10px;
+    }
+    .course-cta-h2 {
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .course-cta-p {
+        margin-top: 0;
+        margin-bottom: 32px;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+    }
+    .course-cta-form input {
+        margin-bottom: 16px;
+        padding: 17px 16px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .course-cta-form input[type="submit"] {
+        height: 56px;
+        margin: 32px 0 8px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .course-cta-form input[type="submit"]:hover,
+    .course-cta-form input[type="submit"]:active {
+        box-shadow: none;
+    }
+    .course-cta-notes,
+    .course-cta-notes a {
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .course-cta-bottom {
+        margin: 32px 15px;
+    }
+    .course-cta-name {
+        order: 1;
+        margin-right: 0;
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: -3px;
+    }
+    .course-brief-ul {
+        order: 2;
+    }
+    .course-cta-hr {
+        order: 4;
+        margin: 14px 0 8px;
+    }
+    .course-cta-price {
+        display: flex;
+        flex-direction: column;
+        order: 5;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .course-cta-entry {
+        order: 6;
+        margin-top: 0;
+        padding-left: 10px;
+        align-self: flex-start;
+    }
+    .course-cta-bottom .course-cta-ul li {
+        margin-top: 8px;
+    }
+    .course-brief-ul {
+        margin-bottom: 12px;
+    }
+    .course-cta-price span {
+        order: -1;
+        margin: 0 0 7px 0;
+        opacity: 0.4;
+        font-size: 13px;
+        line-height: 16px;
+    }
+    .course-reviews-arrowl,
+    .course-reviews-arrowr {
+        width: 40px;
+        height: 40px;
+    }
+    .course-accordion-item .accordion-button:hover {
+        color: var(--project-text-color);
+    }
+    .course-accordion-item .accordion-button:hover:not(.collapsed) {
+        color: var(--project-text-color);
+    }
+
+    /* отзывы */
+    .course-reviews-block {
+        padding: 24px 17px 32px;
+    }
+    .course-reviews-title {
+        margin-bottom: 16px;
+    }
+    .course-reviews-img {
+        width: 64px;
+        height: 64px;
+    }
+    .course-reviews-h4 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .course-reviews-h4 span {
+        margin-top: 4px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .course-reviews-content,
+    .course-reviews-content * {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .course-reviews-photo::after {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    /* доп материалы */
+    .web-books__images {
+        height: 228px;
+        padding: 24px 16px;
+    }
+    .web-books__subtitle {
+        max-height: 66px;
+        margin: 8px 0;
+        font-size: 15px;
+        line-height: 17px;
+        font: 700 15px/17px 'Roboto', sans-serif;
+    }
+    .web-books__descriptions {
+        font-size: 13px;
+        line-height: 15px;
+    }
+    .web-books__item:hover .web-books__images,
+    .web-books__item:active .web-books__images {
+        border-color: #F6F7F8;
+    }
+    .web-books__item:hover .web-books__subtitle,
+    .web-books__item:hover .web-books__descriptions {
+        color: var(--project-text-color);
+    }
+
+    /* рекомендуемые */
+    .course-recommendations-wrapper .course-card {
+        max-width: 100%;
+        padding: 32px 16px;
+    }
+    .course-recommendations-wrapper .card-img {
+        width: 72px;
+        height: 72px;
+        margin-right: 16px;
+    }
+    .course-recommendations-wrapper .card-speakers {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 0;
+    }
+    .course-recommendations-wrapper .card-sale {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+    }
+    .course-recommendations-wrapper .card-data {
+        display: flex;
+        flex-direction: column;
+        margin-top: 13px;
+    }
+    .course-recommendations-wrapper ul.card-text {
+        border-bottom: none;
+    }
+    .course-recommendations-wrapper ul.card-text li {
+        margin-top: 4px;
+        padding-left: 11px;
+        padding-right: 0;
+    }
+    .course-recommendations-wrapper .card-text+.card-extra {
+        order: -1;
+        width: 100%;
+    }
+    .course-recommendations-wrapper .card-price {
+        justify-content: flex-start;
+        min-height: auto;
+        margin-top: 16px;
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        border-bottom: 1px solid var(--project-text-color);
+        padding-bottom: 8px;
+    }
+    .course-recommendations-wrapper .card-price .card-extra {
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+    .course-recommendations-wrapper .sum p {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .course-recommendations-wrapper .course-card:hover,
+    .course-recommendations-wrapper .course-card:hover .card-text,
+    .course-recommendations-wrapper .course-card:hover .sum p,
+    .course-recommendations-wrapper .course-card:hover .sum p:first-child {
+        color: var(--project-text-color);
+        border-color: var(--project-text-color);
+    }
+    .course-recommendations-wrapper .course-card:hover .card-color {
+        color: var(--project-color-accent);
+    }
+    .course-recommendations-wrapper .course-card:hover .card-sale {
+        background-color: var(--project-color-accent);
+    }
+}
